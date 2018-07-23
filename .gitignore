@@ -66,3 +66,6 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+*.xcuserstate
+SanicSpeed/.DS_Store
+SanicSpeed/SanicSpeed.xcodeproj/project.xcworkspace/xcuserdata/jedguintu.xcuserdatad/UserInterfaceState.xcuserstate
