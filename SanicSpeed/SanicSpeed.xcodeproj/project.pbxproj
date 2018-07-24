@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A50E392106F2EE0083A0AF /* PaceCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A50E382106F2EE0083A0AF /* PaceCalculatorController.swift */; };
 		18AE712F21064598004E6374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE712E21064598004E6374 /* AppDelegate.swift */; };
 		18AE713121064599004E6374 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE713021064599004E6374 /* ViewController.swift */; };
 		18AE713421064599004E6374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18AE713221064599004E6374 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18A50E382106F2EE0083A0AF /* PaceCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceCalculatorController.swift; sourceTree = "<group>"; };
 		18AE712B21064598004E6374 /* SanicSpeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SanicSpeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18AE712E21064598004E6374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18AE713021064599004E6374 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				18AE712E21064598004E6374 /* AppDelegate.swift */,
 				18AE713021064599004E6374 /* ViewController.swift */,
+				18A50E382106F2EE0083A0AF /* PaceCalculatorController.swift */,
 				18AE713221064599004E6374 /* Main.storyboard */,
 				18AE7138210645A0004E6374 /* Assets.xcassets */,
 				18AE713A210645A0004E6374 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A50E392106F2EE0083A0AF /* PaceCalculatorController.swift in Sources */,
 				18AE713121064599004E6374 /* ViewController.swift in Sources */,
 				18AE712F21064598004E6374 /* AppDelegate.swift in Sources */,
 				18AE713721064599004E6374 /* SanicSpeed.xcdatamodeld in Sources */,

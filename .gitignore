@@ -66,7 +66,14 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+<<<<<<< HEAD
 SanicSpeed/.DS_Store
 SanicSpeed/SanicSpeed.xcodeproj/project.xcworkspace/xcuserdata/jedguintu.xcuserdatad/UserInterfaceState.xcuserstate
 *.xcuserstate
 *.xcuserstate
+=======
+*.xcuserstate
+SanicSpeed/.DS_Store
+SanicSpeed/SanicSpeed.xcodeproj/project.xcworkspace/xcuserdata/jedguintu.xcuserdatad/UserInterfaceState.xcuserstate
+*.xcuserstate
+>>>>>>> pace-calculator
