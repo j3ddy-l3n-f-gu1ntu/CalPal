@@ -9,8 +9,19 @@
 import Foundation
 import UIKit
 
-class PaceCalculatorClass: UIViewController {
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
     
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
+class PaceCalculatorClass: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var paceResultDisplay: UILabel!
     @IBOutlet weak var hourInput: UITextField!
@@ -43,16 +54,26 @@ class PaceCalculatorClass: UIViewController {
             let remainderForPace = paceResult.truncatingRemainder(dividingBy: 1)
             let secondsForPaceResult = (remainderForPace * 60) * 0.01
             let finalPace = (paceResult - remainderForPace) + secondsForPaceResult
+            let finalPaceRounded = (finalPace * 100).rounded() / 100
             
-            print (finalPace)
-            paceResultDisplay.text = "\(finalPace) minute(s) per mile"
+            print (finalPaceRounded)
+            paceResultDisplay.text = "\(finalPaceRounded) minute(s) per mile"
         }
+    }
+    
+    func textFieldShouldReturn(_ hourInput: UITextField, secInput: UITextField, minuteInput: UITextField, distanceInput: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        secInput.delegate = self
+        hourInput.delegate = self
+        minuteInput.delegate = self
+        distanceInput.delegate = self
+        self.hideKeyboardWhenTappedAround()
         
     }
     

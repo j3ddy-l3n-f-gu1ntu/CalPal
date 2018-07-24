@@ -115,7 +115,7 @@
                                 <accessibility key="accessibilityConfiguration" identifier="inputHours"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="secs" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iMu-nL-t3j">
                                 <rect key="frame" x="249" y="184" width="49" height="30"/>
@@ -123,7 +123,7 @@
                                 <accessibility key="accessibilityConfiguration" identifier="inputSec"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mins" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m5a-Bm-UZP">
                                 <rect key="frame" x="162" y="184" width="52" height="30"/>
@@ -131,7 +131,7 @@
                                 <accessibility key="accessibilityConfiguration" identifier="inputMin"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance Ran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gml-zE-NIO">
                                 <rect key="frame" x="137" y="258" width="101" height="21"/>
@@ -146,7 +146,7 @@
                                 <accessibility key="accessibilityConfiguration" identifier="inputDistance"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Your Minute(s) Per Mile(s) Pace Would Be: " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LjW-pQ-08y">
                                 <rect key="frame" x="0.0" y="401" width="375" height="134"/>
