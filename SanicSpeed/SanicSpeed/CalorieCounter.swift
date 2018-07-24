@@ -19,16 +19,50 @@ class CalorieCounterClass: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func resetButtonPressed(_ sender: Any) {
+        userCal.text = "0"
+        calCap.text = "Max Cals"
     }
     
-
+    
     @IBAction func goButtonPressed(_ sender: Any) {
-        maxCalIntake()
+        if (subCal.text?.isEmpty)! && (addCal.text?.isEmpty)! {
+                maxCalIntake()
+            }
+
+        if (maxCalorieIntake.text!.isEmpty) && (subCal.text!.isEmpty) {
+                addCalories()
+            }
+        
+        if (maxCalorieIntake.text!.isEmpty) && (addCal.text!.isEmpty) {
+                subCalories()
+            }
+        }
+    
+    func subCalories() {
+        let subCals: Int? = Int(subCal.text!)
+        if subCals == nil {
+            print("nothing to subtract")
+        }
+        else if subCals != nil {
+            let userCalories = Int(userCal.text!)
+            if userCalories! > 0 && userCalories! >= subCals!{
+                let subbedUserCals = userCalories! -  subCals!
+                userCal.text = "\(subbedUserCals)"
+            }
+        }
     }
+    
+    func addCalories() {
+        let addCals: Int? = Int(addCal.text!)
+        let userCalories : Int? = Int(userCal.text!)
+        if userCalories! >= 0 {
+                    let addedCalories = userCalories! + addCals!
+                    userCal.text = "\(addedCalories)"
+                }
+        }
     
     func maxCalIntake() {
         let maxCalories :Int? = Int(maxCalorieIntake.text!)
-        
         if maxCalories == nil {
             print("nothing to show here")
         }
@@ -41,12 +75,11 @@ class CalorieCounterClass: UIViewController, UITextFieldDelegate {
     
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.hideKeyboardWhenTappedAround()
-
+        
     }
     
     override func didReceiveMemoryWarning() {
