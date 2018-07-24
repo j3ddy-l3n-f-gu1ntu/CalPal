@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="1185" y="-1522"/>
         </scene>
-        <!--View Controller-->
+        <!--Pace Calculator Class-->
         <scene sceneID="tHT-az-K35">
             <objects>
-                <viewController id="AbN-I3-2Qo" sceneMemberID="viewController">
+                <viewController id="AbN-I3-2Qo" customClass="PaceCalculatorClass" customModule="SanicSpeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GZ0-zs-mxA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,13 +148,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="The time you need/hit per mile is:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LjW-pQ-08y">
-                                <rect key="frame" x="0.0" y="401" width="375" height="194"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Your Minute(s) Per Mile(s) Pace Would Be: " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LjW-pQ-08y">
+                                <rect key="frame" x="0.0" y="401" width="375" height="134"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FE2-1C-e9c">
+                                <rect key="frame" x="75" y="578" width="223" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calculate Pace"/>
+                                <connections>
+                                    <action selector="calcPaceButton:" destination="AbN-I3-2Qo" eventType="touchUpInside" id="etB-yU-l1d"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="pace" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyf-Jx-C7C">
+                                <rect key="frame" x="87" y="441" width="211" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -164,6 +179,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qjD-Ip-cOS"/>
                     </view>
+                    <connections>
+                        <outlet property="distanceInput" destination="AXz-dS-c1b" id="Wqd-Cj-ugg"/>
+                        <outlet property="hourInput" destination="BIT-fN-KqW" id="eoG-IH-yEe"/>
+                        <outlet property="minuteInput" destination="m5a-Bm-UZP" id="fwr-sa-Dbl"/>
+                        <outlet property="paceResultDisplay" destination="dyf-Jx-C7C" id="Ygr-aq-4IJ"/>
+                        <outlet property="secInput" destination="iMu-nL-t3j" id="X2M-8b-JIw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gz7-z2-hgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
